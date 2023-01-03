@@ -14,28 +14,35 @@
   **[Requirements](#Requirements)**<br>
   **[Installation](#Installation)**<br>
   **[Usage](#Usage)**<br>
-  **[Contributing](#Contributing)**<br>
+  **[Contributing](#How-toContribute)**<br>
   **[Tests](#Tests)**<br>
   **[License](#License)**<br>
 
   ## Installation
 
-  1st: Copy files to your project directory. Make sure create a directory named destination on your root folder as files from this repository. (Empty Readme file as a place holder at the moment, application will create the file but directory must exist.)
-  2nd: Create Package JSON file.
-  3rd: Install dependencies and modules.
+  1st: Copy files to your project directory. Make sure create a directory named destination on your root folder as files from this repository. (Empty Readme file as a place holder at the moment, application will create the file but directory must exist.)<br>
+
+  2nd: Create Package JSON file. Type npm init -y on command prompt and inside the root file.<br>
+
+  3rd: Install inquirer module and other dependencies. Type npm i inquirer@8.2.4.<br>
+
   4th: Run "node index.js" at command prompt, make sure you have Node installed. please check node installation tutorials for more information.
+  https://nodejs.org/en/
+  <br>
+
   5th: Type the information for your Readme file:
-    Title of your project, Description, Table of Contents, Link to Repository, Link to Application, installation, Usage, Contributions, tests and licensing information.
-  6th: Sucessfully creation log will be shown and Readme file will be created on destination directory.
+    Title of your project, Description, Table of Contents, Link to Repository, Link to Application, installation, Usage, Contributions, tests and licensing information.<br>
+
+  6th: Sucessfully creation log will be shown and Readme file will be created on destination directory.<br>
 
 
   ## Application Link
 
-  linkapp
+  No application link, must be installed on local hardware to use.
 
   ## Link to Project Repository
 
-  linkrepo
+  https://github.com/cdennis27/Readme-Generator#Link-to-Project-Repository
 
   ## Requirements
 
@@ -155,7 +162,7 @@
 
   https://choosealicense.com/licenses/mit/
 
-  ## License Section
+  ## License
 
   MIT License
 
