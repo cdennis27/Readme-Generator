@@ -1,6 +1,4 @@
 
-
-// If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (!license) {
     return '';
@@ -15,7 +13,6 @@ function renderLicenseBadge(license) {
   };
 };
 
-
 function renderLicenseLink(license) {
   if (!license) {
     return '';
@@ -29,7 +26,6 @@ function renderLicenseLink(license) {
     return 'https://choosealicense.com/licenses/gpl-3.0/';
   };
 };
-
 
 function renderLicenseSection(answers) {
   license = answers.license;
@@ -966,7 +962,7 @@ https://www.gnu.org/licenses/why-not-lgpl.html.`;
 };
 
 function renderLinkApplication(linkApp) {
-  
+ 
   console.log(`linkApp: ${linkApp}`);
   if (!linkApp) {
     return '';
@@ -1075,21 +1071,54 @@ function contributorConvenant(contributing) {
     https://www.contributor-covenant.org/faq. Translations are available at
     https://www.contributor-covenant.org/translations.
     `;
-    
-    } else {
+
+  } else {
     return `${contributing}`;
   };
 };
 
 function contributorBadge(contributing) {
-  //linkApp = answers.linkApp;
+
   console.log(`contributing: ${contributing}`);
   if (!contributing) {
     return '[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)';
   } else {
     return '';
   };
-  
+
+};
+
+function renderTableContents(answers) {
+  var a, b, c, d, e, f, g, h = '';
+  if (answers.description != null && answers.description != '' && answers.description != undefined) {
+    a = '**[Description](#Description)**<br>';
+  } else {
+    return a = '';
+  } if (answers.installation != null && answers.installation != '' && answers.installation != undefined) {
+    b = '**[Installation](#Installation)**<br>';
+  } else {
+    b = '';
+  } if (answers.linkApp != null && answers.linkApp != '' && answers.linkApp != undefined) {
+    c = '**[Link for Application](#Application-Link)**<br>';
+  } else {
+    c = '';
+  } if (answers.linkRepo != null && answers.linkRepo != '' && answers.linkRepo != undefined) {
+    d = '**[Link for Repository](#Link-to-Project-Repository)**<br>';
+  } else {
+    d = '';
+  } if (answers.usage != null && answers.usage != '' && answers.usage != undefined) {
+    e = '**[Usage](#Usage)**<br>';
+  } else {
+    e = '';
+  }
+  f = '**[How to Contribute](#How-to-Contribute)**<br>';
+  if (answers.installation != null && answers.installation != '' && answers.installation != undefined) {
+    g = '**[Tests](#Tests)**<br>';
+  } else {
+    g = '';
+  } if (answers.license != null && answers.license != '' && answers.license != undefined) {
+    h = '**[License](#License-Section)**<br>';
+  } return `${a} ${b} ${c} ${d} ${e} ${f} ${g} ${h}`;
 };
 
 const generateMarkdown = (answers) =>
@@ -1101,10 +1130,12 @@ const generateMarkdown = (answers) =>
   ## Description
 
   ${answers.description}
+
   
+
   ## Table of Contents
 
-  ${answers.tableOfContents}
+  ${renderTableContents(answers)}
 
   ## Installation
 
