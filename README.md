@@ -20,13 +20,13 @@
 
   ## Installation
 
-  1st: Copy files to your project directory. Make sure create a directory named destination on your root folder as files from this repository. (Empty Readme file as a place holder at the moment, application will create the file but directory must exist.)<br>
+  1st: Copy files to your project directory. Make sure to create a directory named destination on your root folder as files from this repository. (Empty Readme file as a place holder at the moment, application will create the file but directory must exist. If you extract directory as is should work without a problem.)<br>
 
-  2nd: Create Package JSON file. Type npm init -y on command prompt and inside the root file.<br>
+  2nd: Create Package JSON file. Type npm init -y on command prompt and inside the root folder.<br>
 
-  3rd: Install inquirer module and other dependencies. Type npm i inquirer@8.2.4.<br>
+  3rd: Install inquirer module and other dependencies. Type npm i inquirer@8.2.4. on command prompt at root folder.<br>
 
-  4th: Run "node index.js" at command prompt, make sure you have Node installed. please check node installation tutorials for more information.
+  4th: Run "node index.js" at command prompt, make sure you have Node installed. Please check node installation tutorials for more information:
   https://nodejs.org/en/
   <br>
 
@@ -35,10 +35,13 @@
 
   6th: Sucessfully creation log will be shown and Readme file will be created on destination directory.<br>
 
-
   ## Application Link
 
   No application link, must be installed on local hardware to use.
+
+  ## Link to tutorial video how to install and use application
+
+  "Link will be here soon..."
 
   ## Link to Project Repository
 
