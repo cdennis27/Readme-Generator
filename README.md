@@ -41,7 +41,7 @@
 
   ## Link to tutorial video how to install and use application
 
-  "Link will be here soon..."
+  https://drive.google.com/file/d/1Atf7X2BbHruL_EYWvtzk2EqByZ8V3CHU/view
 
   ## Link to Project Repository
 
