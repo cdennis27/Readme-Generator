@@ -1112,13 +1112,38 @@ function renderTableContents(answers) {
     e = '';
   }
   f = '**[How to Contribute](#How-to-Contribute)**<br>';
-  if (answers.installation != null && answers.installation != '' && answers.installation != undefined) {
+  if (answers.tests != null && answers.tests != '' && answers.tests != undefined) {
     g = '**[Tests](#Tests)**<br>';
   } else {
     g = '';
+  } if (answers.questions != null && answers.questions != '' && answers.questions != undefined) {
+    h = '**[Questions](#Questions)**<br>';
+  } else {
+    h = '';
   } if (answers.license != null && answers.license != '' && answers.license != undefined) {
-    h = '**[License](#License-Section)**<br>';
-  } return `${a} ${b} ${c} ${d} ${e} ${f} ${g} ${h}`;
+    i = '**[License](#License-Section)**<br>';
+  } return `${a} ${b} ${c} ${d} ${e} ${f} ${g} ${h} ${i}`;
+};
+
+function renderQuestions(questions) {
+  
+  if (!questions) {
+    return '';
+  } else {
+    return `For questions please contact me through my GitHub contacts link:
+    https://github.com/${questions}`;
+  };
+
+};
+
+function renderEmail(email) {
+  
+  if (!email) {
+    return '';
+  } else {
+    return `Email for contact: ${email}`;
+  };
+
 };
 
 const generateMarkdown = (answers) =>
@@ -1130,9 +1155,7 @@ const generateMarkdown = (answers) =>
   ## Description
 
   ${answers.description}
-
   
-
   ## Table of Contents
 
   ${renderTableContents(answers)}
@@ -1151,14 +1174,19 @@ const generateMarkdown = (answers) =>
 
   ${answers.usage}
 
-  ## How to Contribute
-
-  ${contributorConvenant(answers.contributing)}
-
   ## Tests
 
   ${answers.tests}
-  
+
+  ## Questions
+
+  ${renderQuestions(answers.questions)}<br>
+  ${renderEmail(answers.email)}
+
+  ## How to Contribute
+
+  ${contributorConvenant(answers.contributing)}
+    
   ## License Link
 
   ${renderLicenseLink(answers.license)}
